@@ -145,6 +145,7 @@ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3528-rock-2f.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3528-x88pro13.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3528-xylink-xr3528.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3528-yixun-rs6pro.dtb
+dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3528-mytv-net1.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3538-demo1-v10-linux.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3538-demo2-v10.dtb
 dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3538-demo3-v10.dtb
