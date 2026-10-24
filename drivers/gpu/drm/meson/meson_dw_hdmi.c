@@ -369,9 +369,9 @@ static inline void meson_dw_hdmi_phy_reset(struct meson_dw_hdmi *dw_hdmi)
 	mdelay(2);
 }
 
-static int dw_hdmi_phy_init(struct dw_hdmi *hdmi, void *data,
-			    const struct drm_display_info *display,
-			    const struct drm_display_mode *mode)
+static int meson_dw_hdmi_phy_init(struct dw_hdmi *hdmi, void *data,
+				  const struct drm_display_info *display,
+				  const struct drm_display_mode *mode)
 {
 	struct meson_dw_hdmi *dw_hdmi = (struct meson_dw_hdmi *)data;
 	bool is_hdmi2_sink = display->hdmi.scdc.supported;
@@ -496,7 +496,7 @@ static void dw_hdmi_setup_hpd(struct dw_hdmi *hdmi,
 }
 
 static const struct dw_hdmi_phy_ops meson_dw_hdmi_phy_ops = {
-	.init = dw_hdmi_phy_init,
+	.init =  meson_dw_hdmi_phy_init, // dw_hdmi_phy_init
 	.disable = dw_hdmi_phy_disable,
 	.read_hpd = dw_hdmi_read_hpd,
 	.setup_hpd = dw_hdmi_setup_hpd,
