@@ -389,6 +389,8 @@
 	phy-mode = "rmii";
 	clock_in_out = "input";
 	phy-handle = <&rmii0_phy>;
+	nvmem-cells = <&macphy_bgs>;
+	nvmem-cell-names = "bgs";
 	status = "okay";
 
 	mdio {
@@ -399,7 +401,12 @@
 		rmii0_phy: ethernet-phy@2 {
 			compatible = "ethernet-phy-id0044.1400", "ethernet-phy-ieee802.3-c22";
 			reg = <2>;
+			clocks = <&cru 0x18e>;
+			resets = <&cru 0x2a3>;
 			phy-is-integrated;
+			pinctrl-names = "default";
+			nvmem-cells = <&macphy_txlevel>;
+			nvmem-cell-names = "txlevel";
 		};
 	};
 };
