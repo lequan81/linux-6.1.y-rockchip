@@ -46,6 +46,14 @@
 		bootargs = "earlycon=uart8250,mmio32,0xff9f0000 console=ttyS0,1500000";
 	};
 
+	/* Keep the secure-world interface present for the Android/vendor BL31. */
+	firmware {
+		optee {
+			compatible = "linaro,optee-tz";
+			method = "smc";
+		};
+	};
+
 	fiq_debugger: fiq-debugger {
 		compatible = "rockchip,fiq-debugger";
 		rockchip,serial-id = <0>;
@@ -427,8 +435,15 @@
 			clocks = <&cru 0x18e>;
 			resets = <&cru 0x2a3>;
 			phy-is-integrated;
+			/* Match stable: no PHY LED pinmux and no PHY thermal hook. */
 			/delete-property/ pinctrl-names;
 			/delete-property/ pinctrl-0;
+			/delete-property/ rockchip,thermal-zone;
+			/* GitHub variant, disabled for this boot test:
+			 * pinctrl-names = "default";
+			 * pinctrl-0 = <&fephym0_led_link &fephym0_led_spd>;
+			 * rockchip,thermal-zone = "soc-thermal";
+			 */
 			nvmem-cells = <&macphy_txlevel>;
 			nvmem-cell-names = "txlevel";
 		};
@@ -586,11 +601,8 @@
 		| RKPM_GPIO_WKUP_EN
 		)
 	>;
-	rockchip,pwm-regulator-config = <
-		(0
-		| RKPM_PWM1_M0_REGULATOR_EN
-		)
-	>;
+	/* Match stable; the newer compiled value 0x02 is intentionally not used. */
+	rockchip,pwm-regulator-config = <0x03>;
 };
 
 &rockchip_system_monitor {
