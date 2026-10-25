@@ -425,11 +425,11 @@
 			compatible = "ethernet-phy-id0044.1400", "ethernet-phy-ieee802.3-c22";
 			reg = <2>;
 			clocks = <&cru 0x18e>;
-      resets = <&cru 0x2a3>;
-      phy-is-integrated;
-      /delete-property/ pinctrl-names;
-      /delete-property/ pinctrl-0;
-      nvmem-cells = <&macphy_txlevel>;
+			resets = <&cru 0x2a3>;
+			phy-is-integrated;
+			/delete-property/ pinctrl-names;
+			/delete-property/ pinctrl-0;
+			nvmem-cells = <&macphy_txlevel>;
 			nvmem-cell-names = "txlevel";
 		};
 	};
