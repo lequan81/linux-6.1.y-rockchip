@@ -412,8 +412,8 @@
 };
 
 &dmc {
-	center-supply = <&vdd_logic>;
-	status = "okay";
+	/delete-property/ center-supply;
+	status = "disabled";
 };
 
 &gmac0 {
@@ -439,8 +439,7 @@
 			/delete-property/ pinctrl-names;
 			/delete-property/ pinctrl-0;
 			/delete-property/ rockchip,thermal-zone;
-			/* GitHub variant, disabled for this boot test:
-			 * pinctrl-names = "default";
+			/* pinctrl-names = "default";
 			 * pinctrl-0 = <&fephym0_led_link &fephym0_led_spd>;
 			 * rockchip,thermal-zone = "soc-thermal";
 			 */
@@ -457,6 +456,14 @@
 &gpu {
 	mali-supply = <&vdd_gpu>;
 	status = "okay";
+};
+
+&gpu_bus {
+	status = "disabled";
+};
+
+&gpu_bus_opp_table {
+	status = "disabled";
 };
 
 &hdmi {
