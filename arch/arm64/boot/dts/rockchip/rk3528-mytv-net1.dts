@@ -382,7 +382,7 @@
 };
 
 &dfi {
-	status = "okay";
+	status = "disabled";
 };
 
 &display_subsystem {
@@ -413,6 +413,10 @@
 
 &dmc {
 	/delete-property/ center-supply;
+	status = "disabled";
+};
+
+&dmc_opp_table {
 	status = "disabled";
 };
 
