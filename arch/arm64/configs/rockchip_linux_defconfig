@@ -714,3 +714,68 @@ CONFIG_WLAN=y
 CONFIG_WLAN_VENDOR_AIC=y
 CONFIG_AIC8800_SUPPORT=y
 CONFIG_AIC8800_SDIO_WLAN=y
+
+# --- Slim down for VNPT MyTV Net 1 (RK3528) ---
+# CONFIG_WERROR is not set
+# CONFIG_DEBUG_INFO_DWARF_TOOLCHAIN_DEFAULT is not set
+# CONFIG_DEBUG_INFO_REDUCED is not set
+CONFIG_DEBUG_INFO_NONE=y
+# CONFIG_FUNCTION_TRACER is not set
+# CONFIG_BLK_DEV_IO_TRACE is not set
+# CONFIG_LKDTM is not set
+# CONFIG_SCHEDSTATS is not set
+# CONFIG_DEBUG_CREDENTIALS is not set
+# CONFIG_PM_ADVANCED_DEBUG is not set
+# CONFIG_ROCKCHIP_DMC_DEBUG is not set
+# CONFIG_DMABUF_RK_HEAPS_DEBUG is not set
+
+# Unused buses & storage
+# CONFIG_PCI is not set
+# CONFIG_ATA is not set
+# CONFIG_SCSI_UFSHCD is not set
+# CONFIG_MTD is not set
+# CONFIG_CAN is not set
+# CONFIG_I3C is not set
+# CONFIG_TCG_TPM is not set
+
+# Unused SoCs, GPU & network chips
+# CONFIG_CPU_RV1126B is not set
+# CONFIG_CPU_PX30 is not set
+# CONFIG_CPU_RK1808 is not set
+# CONFIG_CPU_RK3328 is not set
+# CONFIG_CPU_RK3399 is not set
+# CONFIG_CPU_RK3538 is not set
+# CONFIG_CPU_RK3562 is not set
+# CONFIG_CPU_RK3568 is not set
+# CONFIG_CPU_RK3576 is not set
+# CONFIG_CPU_RK3588 is not set
+# CONFIG_MALI_MIDGARD is not set
+# CONFIG_NET_DSA is not set
+# CONFIG_R8168 is not set
+# CONFIG_R8125 is not set
+# CONFIG_R8126 is not set
+# CONFIG_WL_ROCKCHIP is not set
+# CONFIG_AP6XXX is not set
+
+# Unused camera, touchscreen, battery & mobile display panels
+# CONFIG_V4L_PLATFORM_DRIVERS is not set
+# CONFIG_V4L_MEM2MEM_DRIVERS is not set
+# CONFIG_INPUT_TOUCHSCREEN is not set
+# CONFIG_MOUSE_CYAPA is not set
+# CONFIG_MOUSE_ELAN_I2C is not set
+# CONFIG_BATTERY_CW2017 is not set
+# CONFIG_BATTERY_SBS is not set
+# CONFIG_CHARGER_GPIO is not set
+# CONFIG_CHARGER_BQ24735 is not set
+# CONFIG_CHARGER_BQ25700 is not set
+# CONFIG_BATTERY_RK817 is not set
+# CONFIG_CHARGER_RK817 is not set
+# CONFIG_ROCKCHIP_ANALOGIX_DP is not set
+# CONFIG_ROCKCHIP_CDN_DP is not set
+# CONFIG_ROCKCHIP_DW_MIPI_DSI is not set
+# CONFIG_ROCKCHIP_DW_DP is not set
+# CONFIG_ROCKCHIP_LVDS is not set
+# CONFIG_ROCKCHIP_RGB is not set
+# CONFIG_ROCKCHIP_SERDES_DRM_PANEL is not set
+# CONFIG_DRM_PANEL_EDP is not set
+# CONFIG_DRM_SII902X is not set
