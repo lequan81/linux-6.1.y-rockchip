@@ -720,6 +720,10 @@ CONFIG_AIC8800_SDIO_WLAN=y
 # CONFIG_DEBUG_INFO_REDUCED is not set
 CONFIG_DEBUG_INFO_NONE=y
 # CONFIG_FUNCTION_TRACER is not set
+# CONFIG_TRACING is not set
+# CONFIG_FTRACE is not set
+# CONFIG_KPROBES is not set
+# CONFIG_KALLSYMS_ALL is not set
 # CONFIG_BLK_DEV_IO_TRACE is not set
 # CONFIG_LKDTM is not set
 # CONFIG_SCHEDSTATS is not set
@@ -728,7 +732,7 @@ CONFIG_DEBUG_INFO_NONE=y
 # CONFIG_ROCKCHIP_DMC_DEBUG is not set
 # CONFIG_DMABUF_RK_HEAPS_DEBUG is not set
 
-# Unused SoCs & unrelated Wi-Fi/Ethernet chips
+# Unused SoCs & wrong Mali GPU generation (RK3528 uses Mali-450, not Bifrost/Midgard)
 # CONFIG_CPU_RV1126B is not set
 # CONFIG_CPU_PX30 is not set
 # CONFIG_CPU_RK1808 is not set
@@ -740,12 +744,32 @@ CONFIG_DEBUG_INFO_NONE=y
 # CONFIG_CPU_RK3576 is not set
 # CONFIG_CPU_RK3588 is not set
 # CONFIG_MALI_MIDGARD is not set
+# CONFIG_MALI_BIFROST is not set
+# CONFIG_MALI_KBASE is not set
+# CONFIG_DRM_PANFROST is not set
+# CONFIG_DRM_AMDGPU is not set
+# CONFIG_DRM_NOUVEAU is not set
+# CONFIG_DRM_RADEON is not set
 # CONFIG_NET_DSA is not set
 # CONFIG_R8168 is not set
 # CONFIG_R8125 is not set
 # CONFIG_R8126 is not set
 # CONFIG_WL_ROCKCHIP is not set
 # CONFIG_AP6XXX is not set
+
+# Move non-boot subsystems from built-in (=y) to loadable modules (=m) to shrink Image < 24 MiB
+CONFIG_BT=m
+CONFIG_SOUND=m
+CONFIG_MEDIA_SUPPORT=m
+CONFIG_DRM_LIMA=m
+CONFIG_BTRFS_FS=m
+CONFIG_XFS_FS=m
+CONFIG_F2FS_FS=m
+CONFIG_NTFS3_FS=m
+CONFIG_OVERLAY_FS=m
+CONFIG_BLK_DEV_NVME=m
+CONFIG_USB_SERIAL=m
+CONFIG_USB_NET_DRIVERS=m
 
 # Initrd decompression support
 CONFIG_RD_GZIP=y
