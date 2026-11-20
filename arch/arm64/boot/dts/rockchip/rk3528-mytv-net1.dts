@@ -232,7 +232,6 @@
 		compatible = "regulator-fixed";
 		regulator-name = "vcc_sd";
 		regulator-boot-on;
-		gpio = <&gpio4 RK_PA1 GPIO_ACTIVE_LOW>;
 		regulator-min-microvolt = <3300000>;
 		regulator-max-microvolt = <3300000>;
 		vin-supply = <&vcc_3v3_s3>;
@@ -670,6 +669,7 @@ pinctrl-0 = <&sdmmc_clk &sdmmc_cmd &sdmmc_det &sdmmc_bus4>;
 rockchip,default-sample-phase = <90>;
 supports-sd;
 vmmc-supply = <&vcc_sd>;
+vqmmc-supply = <&vcc_3v3_s3>;
 status = "okay";
 };
 
