@@ -630,6 +630,8 @@ bus-width = <8>;
 no-sd;
 no-sdio;
 non-removable;
+pinctrl-names = "default";
+pinctrl-0 = <&emmc_bus8 &emmc_clk &emmc_cmd &emmc_strb>;
 mmc-hs200-1_8v;
 mmc-hs400-1_8v;
 mmc-hs400-enhanced-strobe;
